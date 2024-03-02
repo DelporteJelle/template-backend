@@ -8,6 +8,7 @@ export class TemplateService {
       id: 1,
       name: 'Template 1',
       type: 'Type 1',
+      list: ['st1', 'st2'],
     },
   ];
 

@@ -58,16 +58,33 @@ $ npm run test:e2e
 $ npm run test:cov
 ```
 
-## Support
+## Structure
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+### Module
 
-## Stay in touch
+Groups features, create a module for each feature branch with.
+`nest g module {name}`
 
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+### Controller
 
-## License
+Provides the endpoints.
+`nest g c {name}`
 
-Nest is [MIT licensed](LICENSE).
+### Services
+
+Implements the endpoint an includes the actual logic.
+`nest g s {name}`
+
+### Entity
+
+specify the properties of an entity.
+
+### DTO's
+
+specify the body type for an endpoint, includes validation.
+`nest g class {path name}/dto/{name}.dto --no-spec`
+
+Install dependencies for this:
+`npm i class-validator class-transformer`
+and
+`npm i @nestjs/mapped-types`
